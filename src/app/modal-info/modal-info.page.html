@@ -1,0 +1,27 @@
+<ion-header no-border>
+  <ion-toolbar color="light">
+    
+    <ion-title> Horario de recolección </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  <ion-card color="light" *ngFor="let item of data"> 
+    <ion-card-header color="success"> 
+      <ion-card-title>Hora {{item.hI}} -- {{item.hF}}</ion-card-title>
+      <ion-card-subtitle>Días. {{item.horario}}</ion-card-subtitle>
+    </ion-card-header>    
+    <ion-card-content>
+    {{item.ruta}}
+    </ion-card-content>
+
+  </ion-card>
+
+  
+</ion-content>
+<ion-footer>
+  <ion-button expand="full" (click)="salirSinArgumentos()">
+    Salir 
+  </ion-button>
+</ion-footer>

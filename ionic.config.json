@@ -1,0 +1,12 @@
+{
+  "name": "AppMovilRecoleccion",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "proxies":[{
+    "path":"/*",
+    "proxyUrl":"http://181.196.136.7:8080/api/"
+  }
+   
+  ]}

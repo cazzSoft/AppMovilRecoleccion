@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>
+      Enviar opiniones
+     </ion-title>
+     <ion-buttons slot="end">
+       <ion-button (click)="mostrarPopover($event)">
+         <ion-icon name="ellipsis-horizontal" slot="icon-only"></ion-icon>
+         <!-- <ion-icon name="contact" slot="icon-only"></ion-icon> -->
+       </ion-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="welcome-card">
+    <img src="/assets/logochoneR.png" alt="" />
+    <ion-card-header>
+      <ion-card-title>Bienvenido </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Tu opinión cuenta, ayúdanos a mejor nuestros servicios por un Chone limpio.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <form (ngSubmit)="EnviarOpinion()">
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+
+      <ion-item>
+        <ion-label position="stacked">Comentario</ion-label>
+        <ion-textarea required='true'name='desOpinion'[(ngModel)]="desOpinion" ></ion-textarea>
+      </ion-item>
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button type="submit"color="danger"  [disabled]="btnOpi" class="ion-no-margin"><ion-icon slot="icon-only" name="paper-plane-outline"></ion-icon></ion-button>
+    </div>
+  </form> 
+</ion-content>

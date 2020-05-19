@@ -1,0 +1,67 @@
+<ion-header  [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>
+      Configuración de cuenta
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarPopover($event)">
+        
+        <ion-icon (click)="mostrarPopover($event)" name="ellipsis-horizontal" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item-group> 
+    <ion-list #listasRutasRefer>
+      <ion-item-divider>
+        <ion-label >Puntos de Interés</ion-label>
+        <!-- <ion-icon slot="end" name="arrow-dropright"></ion-icon> -->
+        <ion-button  slot="end" shape="round"  (click)="masPuntos()">
+          puntos
+          <ion-icon  (click)="masPuntos()" slot="end" name="add-circle-outline"></ion-icon>
+            
+        </ion-button>
+      </ion-item-divider> 
+
+      <ion-item-sliding  *ngFor="let item of listaPunto">
+
+        <ion-item >
+          <ion-icon color="danger" name="location-outline"></ion-icon> 
+          <ion-label   (click)="irConfig(this.item)">{{item.descripcion}} </ion-label>
+          <ion-icon  (click)="irConfig(this.item)" slot="end" color="tertiary"  name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+      
+        <ion-item-options side="end">
+          <ion-item-option color="danger" (click)="eliminarP(item)">
+            <ion-icon  slot="icon-only" name="trash-outline"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+  
+      </ion-item-sliding>
+    </ion-list>  
+    </ion-item-group>
+    <br>
+    <ion-item-group>
+        <ion-item-divider>
+          <ion-label  > Cuenta</ion-label>
+        </ion-item-divider>
+        <ion-item >
+          <ion-icon name="person" color="tertiary"></ion-icon>
+          <ion-label (click)="irDatos()">  Mi cuenta </ion-label>
+          <ion-icon (click)="irDatos()" slot="end" color="tertiary" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+    </ion-item-group>
+      
+    <ion-item-group>
+        <ion-item-divider>
+          <ion-label > Configuración de Notificaciones</ion-label>
+        </ion-item-divider>
+        <ion-item >
+          <ion-icon  color="warning" name="notifications-outline"></ion-icon>
+          <ion-label (click)="irNotificacion()"> Notificaciones </ion-label>
+          <ion-icon (click)="irNotificacion()" slot="end" color="tertiary" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+  </ion-item-group>
+</ion-content>

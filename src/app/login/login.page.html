@@ -1,0 +1,31 @@
+
+<ion-content  text-center  [fullscreen]="true">
+  <div class="imagen">
+      <img class="icon" src="assets/icon/recicle1.png" alt="logo">
+  </div>
+  <div class="letras">
+      <ion-text color="danger" class="text-titulo">
+          <h4 ><span><b>LOGIN</b></span> </h4>
+      </ion-text>
+  </div>
+  <form  #formulario="ngForm" (ngSubmit)="onSubmitTemplate()" padding class="form">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating" >Cédula</ion-label>
+        <ion-input required  name="dni" type="number" [(ngModel)]="usuario.dni" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input required name="password" type="password" [(ngModel)]="usuario.password"   ></ion-input>
+      </ion-item>
+    </ion-list>
+    <br>
+    <ion-button class="btnLoguin"  [disabled]="formulario.invalid" expand="block" color="danger" type="submit"  >Iniciar sesión</ion-button>
+  </form>
+  <ion-grid fixed>
+    <ion-row size="8" offset="5" style="text-align: center; margin-top: 50px;">
+     <label color="danger" class="btnLoguin" (click)="registrar()"> <ion-icon name="person-add-outline"></ion-icon> Registrarse</label>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,63 @@
+<ion-header no-border [ngClass]="ocultar">
+  <ion-toolbar>
+    <img src="/assets/logo-icon.png" alt="" class="avatar animated fadeIn">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides  pager="true" >
+    <ion-slide>
+      <div class="slide-img-padding">
+        <img src="/assets/slides/s1.png" alt="" class="slide-image">
+      </div>
+      <div >
+        <h4 >BIENVENIDO</h4>
+        <h5 style="color:mediumpurple;">{{nombreUser}}</h5>
+      </div>
+      <ion-card-content class="ion-">
+        <p><b> ¡Gracias por unirte!</b><br>Te invitamos a sacar tu basura a tiempo para ello te recomendamos realizar los siguientes pasos:</p>
+         <br> <P>No dejes que se te pase el carro recoletor<br></P>
+      </ion-card-content><br> 
+    </ion-slide>
+    <ion-slide *ngFor="let item of slides">
+      <div class="slide-img-padding">
+        <img [src]="item.img" alt="" class="slide-image">
+      </div>
+      <div style="color:mediumseagreen;">
+        <h1 [innerHTML]="item.titulo"></h1>
+      </div>
+      <div><b [innerHTML]="item.sub"></b></div>
+      <ion-card-content class="pad" >
+        <p [innerHTML]="item.desc" class="txt"></p>
+      </ion-card-content>
+      <!-- <h1>Awesome Slide Content</h1> -->
+    </ion-slide>
+    <ion-slide>
+      <div class="slide-img-padding">
+        <img src="/assets/slides/ss5.png" alt="" class="slide-image">
+      </div>
+      <ion-card-content class="ion-padding">
+        <b> ¡Es hora de la aventura!</b>
+      </ion-card-content>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="10" offset="1">
+            <ion-button  [disabled]="btnEm"
+                    (click)="btnclick()" 
+                     color="success"
+                     expand="full"  
+                     mode="ios"
+                     class="btn-primary"
+                     shape="round">
+              Empezar
+            </ion-button>
+          </ion-col>
+          
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+
+  
+</ion-content>
+

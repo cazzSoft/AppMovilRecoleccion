@@ -1,0 +1,29 @@
+<ion-content>
+  <div id="mapconfi" style="width: 100%; height: 100%"></div>
+
+  <ion-fab horizontal="end" vertical="center">
+    <ion-fab-button color="danger"  [disabled]="addBtn">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list >
+     
+
+      <ion-fab-button color="tertiary" (click)="deleteRuta()">
+        <ion-icon name="remove-outline"></ion-icon>
+      </ion-fab-button>
+    
+      <ion-fab-button color="tertiary" (click)="nuevaRuta()" >
+      
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-fab-button>
+
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
+
+<ion-footer>
+  <ion-button (click)="onGuardar()" [disabled]="btnact" expand="full" color="danger">
+      Guardar
+    <ion-icon slot="end"name="arrow-redo-outline"></ion-icon>
+  </ion-button>
+</ion-footer>

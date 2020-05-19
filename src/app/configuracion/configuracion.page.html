@@ -1,0 +1,19 @@
+<ion-header no-border>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tab4"></ion-back-button>
+    </ion-buttons>
+    <ion-title >REFERENCIA <b id="hol">{{dataInfo.descripcion}}</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="mapconfiId" style="width: 100%; height: 100%"></div>
+</ion-content>
+
+<ion-footer>
+  <ion-button (click)="horarios()" expand="full" color="danger" [disabled]="btnHorario">
+      horarios de recolección 
+    <ion-icon slot="end" name="today-outline"></ion-icon>
+  </ion-button>
+</ion-footer>

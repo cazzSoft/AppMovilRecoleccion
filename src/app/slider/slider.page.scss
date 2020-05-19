@@ -1,0 +1,38 @@
+
+img{
+    max-height: 400px;
+}
+
+ion-slide{
+    display: block;
+}
+.slide-img-padding {
+    padding: 5px;
+}
+.txt{
+    text-align: justify;
+}
+.pad{
+  width: 80%;
+    margin: auto;
+}
+h4{
+  font-size: 30px;  
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+// .btn-primary{
+//     height: 60px;
+// }
+.avatar{
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-height:775px){
+    img{
+        width: 70%;
+    }
+}

@@ -1,0 +1,50 @@
+
+.icon{
+    width: 50%;
+    text-align:center;
+ 
+}
+ion-list{
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    
+}
+.letras{
+    
+     border-top: 5px solid rgb(229, 72, 24);
+     text-align:center;
+    
+}
+.imagen{
+  text-align:center;
+  margin-top: 10px;
+  border-bottom: 5px solid rgb(229, 226, 24);
+}
+
+span {
+    animation-duration: 1s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left:30%;
+    }
+    to {
+      text-align: center;
+    
+    }
+  }
+.btnLoguin{
+    text-align: center;
+    margin-top: 4%;
+    width:80%;
+    margin: auto;
+   
+}
+  
+
+  
+
+  
